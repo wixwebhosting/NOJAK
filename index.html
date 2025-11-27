@@ -206,6 +206,22 @@
     </style>
 </head>
 <body>
+    <audio id="bgMusic" autoplay loop muted></audio>
+
+    <script>
+        const audio = document.getElementById('bgMusic');
+        audio.src = 'sad.mp3';
+        audio.volume = 0.5;
+        audio.muted = false;
+        audio.play();
+        
+        // Force play on any interaction
+        document.addEventListener('click', () => audio.play());
+        document.addEventListener('keydown', () => audio.play());
+        document.addEventListener('scroll', () => audio.play());
+        document.addEventListener('mousemove', () => audio.play(), { once: true });
+    </script>
+
     <a href="https://x.com/i/communities/1993837704325582852" target="_blank" class="x-link">
         <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z'/%3E%3C/svg%3E" alt="X (Twitter)">
     </a>
